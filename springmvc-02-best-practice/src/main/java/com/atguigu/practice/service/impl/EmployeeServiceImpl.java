@@ -1,13 +1,16 @@
-package com.atguigu.rest.crud.service.impl;
+package com.atguigu.practice.service.impl;
 
-import com.atguigu.rest.crud.bean.Employee;
-import com.atguigu.rest.crud.dao.EmployeeDao;
-import com.atguigu.rest.crud.service.EmployeeService;
+import com.atguigu.practice.exception.BizException;
+import com.atguigu.practice.exception.BizExceptionEnume;
+import com.atguigu.practice.service.EmployeeService;
+import com.atguigu.practice.bean.Employee;
+import com.atguigu.practice.dao.EmployeeDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
 import java.util.List;
+
 
 @Service // 要求：controller只能调service
 public class EmployeeServiceImpl implements EmployeeService {
@@ -21,6 +24,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         return empById;
     }
 
+
     @Override
     public void updateEmp(Employee employee) {
 
@@ -29,7 +33,8 @@ public class EmployeeServiceImpl implements EmployeeService {
         //怎么处理？
         Long id = employee.getId();
         if(id == null){ //页面没有带id
-            return;
+            //中断的业务的时候，必须让上层及以上的链路知道中断原因。推荐抛出业务异常
+            throw new BizException(BizExceptionEnume.ORDER_CLOSED);
         }
         //1、去数据库查询employee原来的值
         Employee empById = employeeDao.getEmpById(id);
