@@ -19,6 +19,7 @@
 - - [x] SpringMVC:RESTful-API内容
 - - [x] SpringMVC完结
 - - [x] Mybatis
+- - [x] SpringBoot
 - - [ ] 持续学习中
 ## 内容
 - 学习记录代码
