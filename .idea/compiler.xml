@@ -9,6 +9,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="springmvc-01-helloworld" />
         <module name="springmvc-02-best-practice" />
+        <module name="springboot-02-demo" />
+        <module name="robot-spring-boot-starter" />
         <module name="springmvc-restful-crud" />
         <module name="mybatis-01-helloworld" />
       </profile>
@@ -22,6 +24,7 @@
         <module name="spring-01-ioc" />
         <module name="spring-02-aop" />
         <module name="spring-03-tx" />
+        <module name="springboot-01-demo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="17" />
@@ -29,9 +32,12 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="mybatis-01-helloworld" options="-parameters" />
+      <module name="robot-spring-boot-starter" options="-parameters" />
       <module name="spring-01-ioc" options="-parameters" />
       <module name="spring-02-aop" options="-parameters" />
       <module name="spring-03-tx" options="-parameters" />
+      <module name="springboot-01-demo" options="-parameters" />
+      <module name="springboot-02-demo" options="-parameters" />
       <module name="springmvc-01-helloworld" options="-parameters" />
       <module name="springmvc-02-best-practice" options="-parameters" />
       <module name="springmvc-restful-crud" options="-parameters" />

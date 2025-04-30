@@ -10,6 +10,8 @@
         <option value="$PROJECT_DIR$/springmvc-01-helloworld/pom.xml" />
         <option value="$PROJECT_DIR$/springmvc-restful-crud/pom.xml" />
         <option value="$PROJECT_DIR$/springmvc-02-best-practice/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-02-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/robot-spring-boot-starter/pom.xml" />
       </list>
     </option>
   </component>
